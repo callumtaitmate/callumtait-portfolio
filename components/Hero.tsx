@@ -23,11 +23,13 @@ function Hero({}: Props) {
         <h2 className="text-sm text-center uppercase text-gray-500 pb-2 tracking-[15px]">
           Callum Tait
         </h2>
+        <div>
         <h1 className="text-center text-3xl lg:text-6xl font-semibold px-10">
           <span className="mr-1">{text}</span>
           <Cursor cursorColor="#ccccc" cursorBlinking />
         </h1>
-        <div className="pt-5">
+        </div>
+        <div className="pt-5 text-center">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
