@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 type Props = {};
 function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[250px] md:w-[400px] xl:w-[400px] snap-center bg-[#292929] p-4 opacity-80 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-[250px] md:w-[250px] snap-center bg-[#292929] p-4 opacity-80 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
         viewport={{ once: true }}
-        className="w-24 h-24 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center ml-3"
+        className="w-24 h-24 rounded-full md:rounded-full md:w-[100px] md:h-[100px] object-cover object-center ml-3"
         src="https://res.cloudinary.com/dj2fwrhvv/image/upload/v1681070812/to-sort/amazon-logo_xgctj9.jpg"
         alt="amazon-logo"
       />

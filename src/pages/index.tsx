@@ -33,7 +33,7 @@ export default function Home() {
       <section id="contactme" className="snap-center">
         <ContactMe />
       </section>
-      <div className="flex justify-center py-2 bg-zinc-900 sticky bottom-0">
+      <div className="flex justify-center py-2 bg-zinc-900 sticky bottom-0 z-50">
         <Link href="#hero">
           <ArrowUpIcon className="h-3 w-3 cursor-pointer" />
         </Link>
