@@ -12,8 +12,7 @@ export default function Home() {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#1cb3ff]">
       <Head>
-        <title>
-       {" Callum's Portfolio "}</title>
+        <title>{" Callum's Portfolio "}</title>
       </Head>
       <Header />
       <section id="hero" className="snap-start">
@@ -34,10 +33,11 @@ export default function Home() {
       <section id="contactme" className="snap-center">
         <ContactMe />
       </section>
-      <div className="flex justify-center py-2 bg-zinc-900 cursor-pointer sticky bottom-0"><Link href="#hero">
-        <ArrowUpIcon className="h-3 w-3"/>
-      </Link></div>
-      
+      <div className="flex justify-center py-2 bg-zinc-900 sticky bottom-0">
+        <Link href="#hero">
+          <ArrowUpIcon className="h-3 w-3 cursor-pointer" />
+        </Link>
+      </div>
     </div>
   );
 }
