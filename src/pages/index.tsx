@@ -21,7 +21,7 @@ type Props = {
   experiences: Experience[];
   socials: Social[];
   pageInfo: PageInfo;
-  project: Project[];
+  projects: Project[];
 };
 export default function Home({ projects, skills, experiences, socials, pageInfo }: Props) {
   return (
