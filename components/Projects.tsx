@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDoubleRight } from "heroicons-react";
+import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../typings";
 import { urlFor } from "../sanity";
 import Link from "next/link";
@@ -16,7 +16,7 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
       
-      <ChevronDoubleRight className="h-6 w-6  text-gray-500 absolute bottom-20"/>
+      <ChevronDoubleRightIcon className="h-6 w-6  text-gray-500 absolute bottom-20"/>
       <motion.div 
     initial={{opacity: 0,}}
     whileInView={{ opacity: 1}}
