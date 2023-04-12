@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-type Props = {};
-function About({}: Props) {
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
+type Props = {
+  pageInfo: PageInfo;};
+function About({pageInfo}: Props) {
   return (
     <motion.div
     initial={{opacity: 0,}}
@@ -28,10 +31,8 @@ function About({}: Props) {
             Context
           </h4>
           <p className="text-base">
-            Started life in operations at Amazon Logistics. Now in operations
-            with an electric vehicle manufacturer.
+            {pageInfo.role}
           </p>
-          <p className="mt-3">Hobbyist developer.</p>
         </div>
         </div>
     </motion.div>

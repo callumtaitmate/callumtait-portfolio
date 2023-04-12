@@ -2,8 +2,12 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
-type Props = {};
-function Hero({}: Props) {
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
+type Props = {
+  pageInfo: PageInfo;
+};
+function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: ["Hello", "From Southampton."],
     loop: true,
@@ -14,14 +18,12 @@ function Hero({}: Props) {
       <BackgroundCircles />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={
-          "https://res.cloudinary.com/dj2fwrhvv/image/upload/v1681029590/to-sort/callum-tait-southampton_enmtyj.jpg"
-        }
+        src={urlFor(pageInfo?.heroImage).url()}
         alt="callum-tait-southampton"
       />
       <div className="z-20">
         <h2 className="text-sm text-center uppercase text-gray-500 pb-2 tracking-[15px]">
-          Callum Tait
+          {pageInfo?.name}
         </h2>
         <div>
         <h1 className="text-center text-3xl lg:text-6xl font-semibold px-10">

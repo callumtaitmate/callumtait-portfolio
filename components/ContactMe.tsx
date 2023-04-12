@@ -1,13 +1,14 @@
 import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
-type Props = {};
+import { PageInfo } from "../typings";
+type Props = {pageInfo: PageInfo;};
 type Inputs = {
   name: string;
   email: string;
   subject: string;
   message: string;
 };
-function ContactMe({}: Props) {
+function ContactMe({ pageInfo}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) =>
     (window.location.href = `mailto:callum.datit@gmail.com?subject=${formData.subject}&body=${formData.message}`);
@@ -24,11 +25,11 @@ function ContactMe({}: Props) {
         <div>
           <div className="flex items-center space-x-5 mb-3">
             <MapPinIcon className="h-6 w-6 text-[#1cb3ff] animate-pulse" />
-            <p>Portswood, Southampton - UK</p>
+            <p>{pageInfo.backgroundInformation}</p>
           </div>
           <div className="flex items-center space-x-5">
             <EnvelopeIcon className="h-6 w-6 text-[#1cb3ff] animate-pulse" />
-            <p>callum.dtait@gmail.com</p>
+            <p>{pageInfo.email}</p>
           </div>
         </div>
       </div>
