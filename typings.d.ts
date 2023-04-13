@@ -1,3 +1,6 @@
+import { PageInfo } from "next/dist/build/utils";
+import pageinfo from "./sanity/schemas/pageinfo";
+
 interface SanityBody {
   _createdAt: string;
   _id: string;
@@ -10,7 +13,11 @@ interface Image {
     _ref: string;
     _type: "reference";
   };
+
+
 }
+
+
 export interface PageInfo extends SanityBody {
   _type: "pageInfo";
   backgroundInformation: string;

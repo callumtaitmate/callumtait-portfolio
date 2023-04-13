@@ -15,6 +15,7 @@ import { fetchExperiences } from "../../utils/fetchExperience";
 import { fetchSkills } from "../../utils/fetchSkills";
 import { fetchProjects } from "../../utils/fetchProject";
 import { Skill, Experience, Social, PageInfo, Project } from "../../typings";
+import { createClient } from "next-sanity";
 
 type Props = {
   skills: Skill[];
@@ -56,13 +57,30 @@ export default function Home({ projects, skills, experiences, socials, pageInfo 
     </div>
   );
 }
-
+const projectId = "xksbbm3a" // "pv8y60vp"
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production" // "production"
+const client = createClient({
+  projectId,
+  dataset,
+  apiVersion: "v2021-10-21", // https://www.sanity.io/docs/api-versioning
+  useCdn: process.env.NODE_ENV === "production", // if you're using ISR or only static generation at build time then you can set this to `false` to guarantee no stale content
+})
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const socials: Social[] = await fetchSocials();
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await client.fetch(`
+  *[_type == "social"] {
+      ...,
+  }`);
+  const pageInfo: PageInfo = await client.fetch(`*[_type == "pageInfo"] [0]`);
+  const experiences: Experience[] = await client.fetch(`*[_type == "experience"] {
+    ...,
+    technologies[]->
+}`);
+  const skills: Skill[] = await client.fetch(`*[_type == "skill"]`);
+  const projects: Project[] = await client.fetch(`
+  *[_type == "project"] {
+      ...,
+      technologies[]->
+  }`);
   return {
     props: {
       socials,
