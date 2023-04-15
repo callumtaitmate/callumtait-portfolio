@@ -27,7 +27,7 @@ function About({pageInfo}: Props) {
           src="https://res.cloudinary.com/dj2fwrhvv/image/upload/v1681055952/to-sort/callum-tait-southampton-tesla_frlzrd.jpg"
         />
         <div className="flex flex-col text-center mb-10">
-          <h4 className="text-2xl font-semibold underline decoration-[#1cb3ff7e] decoration-4 mb-5">
+          <h4 className="text-2xl font-semibold  mb-5">
             Context
           </h4>
           <p className="text-base">

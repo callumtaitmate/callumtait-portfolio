@@ -13,12 +13,12 @@ function ContactMe({ pageInfo}: Props) {
   const onSubmit: SubmitHandler<Inputs> = (formData) =>
     (window.location.href = `mailto:callum.datit@gmail.com?subject=${formData.subject}&body=${formData.message}`);
   return (
-    <div className="flex flex-col relative h-screen text-center md:text-center md:flex-row max-w-5xl px-10 justify-evenly mx-auto items-center ">
+    <div className="flex flex-col relative h-screen text-center md:text-center md:flex-row max-w-5xl px-10 mx-auto justify-evenly items-center ">
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl ml-3">
         Contact
       </h3>
       <div className="flex flex-col space-y-10 items-center">
-        <h4 className="text-3xl font-semibold text-center mr-1 mt-10">
+        <h4 className="text-3xl font-semibold text-center mr-1 mt-20">
           Get in touch.
         </h4>
 
