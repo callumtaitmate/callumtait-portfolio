@@ -9,11 +9,6 @@ import ContactMe from "../../components/ContactMe";
 import Link from "next/link";
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import { GetStaticProps } from "next";
-import { fetchSocials } from "../../utils/fetchSocials";
-import { fetchPageInfo } from "../../utils/fetchPageInfo";
-import { fetchExperiences } from "../../utils/fetchExperience";
-import { fetchSkills } from "../../utils/fetchSkills";
-import { fetchProjects } from "../../utils/fetchProject";
 import { Skill, Experience, Social, PageInfo, Project } from "../../typings";
 import { createClient } from "next-sanity";
 
