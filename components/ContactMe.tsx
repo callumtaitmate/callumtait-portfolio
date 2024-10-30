@@ -11,7 +11,7 @@ type Inputs = {
 function ContactMe({ pageInfo}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) =>
-    (window.location.href = `mailto:callum.datit@gmail.com?subject=${formData.subject}&body=${formData.message}`);
+    (window.location.href = `mailto:callumtaitmate@gmail.com?subject=${formData.subject}&body=${formData.message}`);
   return (
     <div className="flex flex-col relative h-screen text-center md:text-center md:flex-row max-w-5xl px-10 mx-auto justify-evenly items-center ">
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl ml-3">
