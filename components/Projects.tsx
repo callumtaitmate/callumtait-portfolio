@@ -16,14 +16,14 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
       
-      <ChevronDoubleRightIcon className="h-6 w-6  text-gray-500 absolute bottom-20"/>
+      <ChevronDoubleRightIcon className="h-12 w-12  text-gray-500 absolute bottom-20"/>
       <motion.div 
     initial={{opacity: 0,}}
     whileInView={{ opacity: 1}}
     transition={{ duration: 2}}
     className="relative w-full flex overflow-y-hidden snap-x snap-mandatory z-20">
         {projects.map((project) => (
-          <div key={project._id} className="w-screen overflow-x-scroll flex-shrink-0 snap-x flex flex-col items-center justify-center px-9 h-screen">
+          <div key={project._id} className="w-[500px] flex-shrink-0 snap-x flex flex-col items-center justify-center h-screen">
             <motion.img 
             initial={{
               y: -300,
@@ -35,9 +35,9 @@ function Projects({ projects }: Props) {
             src={urlFor(project.image).url()}
             className="w-[200px] md:w-[400px]"/>
             <div className="space-y-5 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-xl font-semibold text-center">
+              <h4 className="text-xl font-semibold text-center mt-4">
                 <Link href={project.linkToBuild}>
-                <span  className=" underline decoration-[#1cb3ff7e] decoration-4 mb-5">
+                <span  className=" underline decoration-[#1cb3ff7e] decoration-4 my-4">
                   {project.title}
                 </span>
                 </Link>
