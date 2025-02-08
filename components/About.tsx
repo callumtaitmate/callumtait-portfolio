@@ -23,8 +23,8 @@ function About({pageInfo}: Props) {
           }}
           whileInView={{ x: 0 }}
           viewport={{ once: true }}
-          className="md:mt-20 flex flex-col justify-center flex-shrink-0 mr-3 mt-10 w-40 h-40 rounded-full object-cover md:rounded-3xl md:w-64 md:h-95 xl:w-[250px] xl:h-[250px] shadow-lg"
-          src="https://res.cloudinary.com/dj2fwrhvv/image/upload/v1681055952/to-sort/callum-tait-southampton-tesla_frlzrd.jpg"
+          className="md:mt-20 flex flex-col justify-center flex-shrink-0 mr-3 mt-10 w-40 h-40 rounded-full object-cover md:rounded-full md:w-64 md:h-95 xl:w-[250px] xl:h-[250px] shadow-lg"
+          src="https://res.cloudinary.com/dj2fwrhvv/image/upload/v1739050888/IMG_1611_ufgs96.png"
         />
         <div className="flex flex-col text-center mb-10">
           <h4 className="text-2xl font-semibold  mb-5">
